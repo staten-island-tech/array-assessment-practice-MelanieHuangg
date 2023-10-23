@@ -131,11 +131,14 @@ console.log(before1900)
 
 //was there at least one book published within the last 100 years?
 
-
+const currentYear = new Date().getFullYear();
+const atLeastOne = books.some((book) => currentYear - book.publishDate <= 100);
+console.log(atLeastOne);
 
 //was every book published within the last 100 years?
 
-
+const everyBook = books.filter((book) => book.publishDate = 100);
+console.log(everyBook);
 
 //print a list of books that "includes" the genre historical
 
